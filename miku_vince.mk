@@ -28,13 +28,6 @@ $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 # Inherit some common Miku UI stuff.
 $(call inherit-product, vendor/miku/build/product/miku_product.mk)
 
-# Spark flags
-TARGET_SUPPORTS_QUICK_TAP := false
-TARGET_SUPPORTS_GOOGLE_RECORDER := false
-TARGET_INCLUDE_STOCK_ARCORE := false
-TARGET_BOOT_ANIMATION_RES := 720
-NO_APERTURE := true
-
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
 PRODUCT_NAME := miku_vince
