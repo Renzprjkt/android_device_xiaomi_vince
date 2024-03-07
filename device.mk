@@ -32,6 +32,11 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 # APEX
 OVERRIDE_TARGET_FLATTEN_APEX := true
 
+# Dynamic Partitions
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -372,7 +377,7 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom \
+    fstab.qcom_ramdisk \
     init.goodix.sh \
     init.msm.usb.configfs.rc \
     init.qcom.early_boot.sh \
